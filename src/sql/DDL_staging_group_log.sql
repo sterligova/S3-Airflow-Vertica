@@ -7,8 +7,12 @@ CREATE TABLE STV2023111328__STAGING.group_log
     user_id INT,
     user_id_from INT,
     event varchar(50),
-    datetime timestamp
+    'datetime' timestamp
 );
+order by group_id, user_id
+SEGMENTED BY HASH(group_id) ALL NODES
+PARTITION BY 'datetime'::date
+GROUP BY calendar_hierarchy_day('datetime'::date, 3, 2);
 
 --INSERT data with COPY from localhost
 COPY STV2023111328__STAGING.group_log (group_id, user_id, user_id_from, event, datetime)
