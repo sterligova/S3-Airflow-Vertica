@@ -48,5 +48,6 @@ After the container starts, you will have access to:
 
 -- Airflow
 localhost:3000/airflow
+
 -- Database
 vertica connection secured
