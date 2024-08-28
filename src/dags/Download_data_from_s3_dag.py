@@ -8,8 +8,8 @@ import boto3
 
 
 # AIRFLOW VARIABLES
-AWS_ACCESS_KEY_ID = "YCAJEWXOyY8Bmyk2eJL-hlt2K"
-AWS_SECRET_ACCESS_KEY = "YCPs52ajb2jNXxOUsL4-pFDL1HnV2BCPd928_ZoA"
+AWS_ACCESS_KEY_ID = "key_id"
+AWS_SECRET_ACCESS_KEY = "access_key"
 
 def fetch_s3_file(bucket: str, key: str):
     session = boto3.session.Session()
