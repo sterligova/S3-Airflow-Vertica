@@ -8,10 +8,10 @@ from typing import List, Optional, Dict
 
 conn_info = {
     'host': 'vertica.tgcloudenv.ru',
-    'port': 5433,
-    'user': 'stv2023111328',
-    'password': '5YUuFPJ2513xIGa',
-    'database': 'dwh',
+    'port': port,
+    'user': 'user',
+    'password': 'password',
+    'database': 'dbname',
     'autocommit': True
 }
 
